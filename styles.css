@@ -3,20 +3,21 @@
     width: 80vw;
 }
 
-.widgets-container {
+.widget-container {
     position: absolute;
     height: 100%;
     width: 80%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
 .widgets-container-wrapper {
-    position: absolute;
-    height: 50%;
-    width: 100%;
+    height: 50vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
