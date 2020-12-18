@@ -1,6 +1,8 @@
 .sc-widget-wrapper {
     height: 10vh;
     width: 60vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .site-background-img {
