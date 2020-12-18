@@ -11,15 +11,15 @@ const data = [
     {title: "Track 8", url: "https://drive.google.com/uc?export=download&id=1BCTJYPUWObICCoqt0eRRbCtYNTp9N5P-"},
 ]
 
-let widget = (url) => {
+let widget = (widget) => {
     let widgetWrapper = document.createElement("div");
     widgetWrapper.className="sc-widget-wrapper";
-    let widgetWrapperHTML = `<audio controls src="${url}"></audio>`
+    let widgetWrapperHTML = `<div><h2 class="widget-title">${widget["title"]}</h2><audio controls src="${widget["url"]}"></audio></div>`
     // let widgetWrapperHTML = `<iframe width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293&amp;&show_artwork=false&show_playcount=false&show_user=false&buying=false&sharing=false&download=false&color=008000"></iframe>`;
     widgetWrapper.innerHTML = widgetWrapperHTML
     return widgetWrapper;
 }
 
 for (let i = 0; i < data.length; i++) {
-    contentWrapper.appendChild(widget(data[i]["url"]));
+    contentWrapper.appendChild(widget(data[i]));
 }
