@@ -14,7 +14,7 @@ const data = [
 let widget = (widget) => {
     let widgetWrapper = document.createElement("div");
     widgetWrapper.className="sc-widget-wrapper";
-    let widgetWrapperHTML = `<div><div class="widget-header"><p>${widget["title"]}</p><h1 class="widget-title">${widget["subtitle"]}</h1></div><audio controls src="${widget["url"]}"></audio></div>`
+    let widgetWrapperHTML = `<div><div class="widget-header"><p>${widget["title"]}</p><h1 class="widget-title">${widget["subtitle"]}</h1></div><audio controls><source src="${widget["url"]}"></source></audio></div>`
     // let widgetWrapperHTML = `<iframe width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293&amp;&show_artwork=false&show_playcount=false&show_user=false&buying=false&sharing=false&download=false&color=008000"></iframe>`;
     widgetWrapper.innerHTML = widgetWrapperHTML
     return widgetWrapper;
