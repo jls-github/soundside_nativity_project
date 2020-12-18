@@ -3,12 +3,20 @@
     width: 60vw;
 }
 
+.site-background-img {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1481086330130-7c3b5b09c567?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9);
+}
+
 .brown-color {
     background-color: #654322 !important;
 }
 
 .main-body-wrapper {
-    background-color: #E25C57;
+    position: absolute;
+    background-color: rgba(266, 92, 87, 0.6);
     width: 100vw;
     display: flex;
     justify-content: center;
