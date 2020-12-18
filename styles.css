@@ -25,3 +25,15 @@
 .brown-color {
     background-color: #654322 !important;
 }
+
+.main-body-wrapper {
+    background-color: #E25C57;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.content-wrapper {
+    width: 80vw;
+    background-color: white;
+}
