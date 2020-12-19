@@ -21,7 +21,6 @@ let widget = (widget) => {
 }
 
 let connectLink = () => {
-    console.log("connect-link")
     let section = document.createElement("section");
     section.className="section";
     let sectionHTML = `<p>Click on the logo to hear more about our events!</p>
