@@ -20,6 +20,24 @@ let widget = (widget) => {
     return widgetWrapper;
 }
 
+let connectLink = () => {
+    console.log("connect-link")
+    let section = document.createElement("section");
+    section.className="section";
+    let sectionHTML = `<p>Click on the logo to hear more about our events!</p>
+    <div class="logo-link-wrapper">
+        <div class="logo-link">
+            <a href="https://www.soundside.church/christmas-connect">
+                <img src="https://pbs.twimg.com/profile_images/676516232481259520/r2wS8T24_400x400.png" alt=""/>
+            </a>
+        </div>
+    </div>`
+    section.innerHTML = sectionHTML;
+    return section;
+}
+
 for (let i = 0; i < data.length; i++) {
     contentWrapper.appendChild(widget(data[i]));
 }
+
+contentWrapper.appendChild(connectLink())
