@@ -41,7 +41,7 @@
 }
 
 .main-body-wrapper {
-    position: absolute;
+    position: relative;
     background-color: rgba(266, 92, 87, 0.6);
     width: 100vw;
     display: flex;
@@ -56,4 +56,8 @@
     align-items: center;
     min-height: 100vh;
     padding: 10px;
+}
+
+.footer-style {
+    position: relative;
 }
