@@ -1,18 +1,19 @@
-.sc-widget-wrapper {
-    margin-top: 10px;
-    margin-bottom: 10px;
+/* background image */
+
+.site-background-img {
+    position: fixed;
+    height: 100vh;
+    min-width: 120vw;
+    background-repeat: round;
+    background-image: url(https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9);
 }
 
-.widget-header {
-    margin-left: 15px;
-    max-width: 60vw;
-}
+/* navbar */
 
 .navbar-background {
     position: absolute;
     height: 100%;
     width: 100%;
-    /* background-image: url(https://images.unsplash.com/photo-1481086330130-7c3b5b09c567?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9); */
     background-color: rgba(210, 65, 80);
     box-shadow: 3px 1px 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
@@ -26,26 +27,10 @@
     align-items: center;
 }
 
-.widget-title {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.site-background-img {
-    position: fixed;
-    height: 100vh;
-    min-width: 120vw;
-    background-repeat: round;
-    background-image: url(https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9);
-}
-
-.brown-color {
-    background-color: #654322 !important;
-}
+/* main body wrappers */
 
 .main-body-wrapper {
     position: relative;
-    /* background-color: rgba(266, 92, 87, 0.6); */
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -63,12 +48,24 @@
     box-shadow: 3px 3px 5px;
 }
 
-.footer-style {
-    position: relative;
-    background-color: rgba(210, 65, 80) !important;
-    border-top: 1px solid rgba(0, 0, 0, 0.5);
-    box-shadow: -3px -3px 5px;
+/* audio widget */
+
+.sc-widget-wrapper {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
+
+.widget-header {
+    margin-left: 15px;
+    max-width: 60vw;
+}
+
+.widget-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Christmas Connect Link */
 
 .logo-link-wrapper {
     margin-top: 10px;
@@ -81,4 +78,13 @@
 .logo-link {
     height: 40vh;
     width: 40vw;
+}
+
+/* Footer */
+
+.footer-style {
+    position: relative;
+    background-color: rgba(210, 65, 80) !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: -3px -3px 5px;
 }
