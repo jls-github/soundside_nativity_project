@@ -1,5 +1,14 @@
 let contentWrapper = document.getElementsByClassName("content-wrapper")[0];
 
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
+
 const data = [
     {title: "Track 1", subtitle: "It Came to Pass", url: "https://res.cloudinary.com/dfymzionj/video/upload/v1608321647/Scene_1_zpilra.mp3"},
     {title: "Track 2", subtitle: "A Long Wait", url: "https://res.cloudinary.com/dfymzionj/video/upload/v1608321644/Scene_2_nsqtta.mp3"},
