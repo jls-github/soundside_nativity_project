@@ -23,7 +23,7 @@ let widget = (widget) => {
 let connectLink = () => {
     let section = document.createElement("section");
     section.className="section";
-    let sectionHTML = `<p>Click on the logo to hear more about our events!</p>
+    let sectionHTML = `<p>We'd love to hear from you. Click on the link below to let us know your thoughts about the night!</p>
     <div class="logo-link-wrapper">
         <div class="logo-link">
             <a href="https://www.soundside.church/christmas-connect">
