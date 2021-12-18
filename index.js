@@ -76,8 +76,8 @@ function onFormSubmit(e) {
     json = JSON.stringify(formattedData)
 
     console.log("sending data to server...")
-    
-    fetch('https://soundside-forms-backend.herokuapp.com/', {
+
+    fetch('https://soundside-forms-backend.herokuapp.com/submissions', {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
