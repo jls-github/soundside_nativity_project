@@ -1,3 +1,5 @@
+// stop all audio tracks currently playing when an audio track is played
+
 let contentWrapper = document.getElementsByClassName("content-wrapper")[0];
 
 document.addEventListener('play', function(e){
@@ -8,6 +10,8 @@ document.addEventListener('play', function(e){
         }
     }
 }, true);
+
+// tracks stored in cloudinary
 
 const data = [
     {title: "Track 1", subtitle: "It Came to Pass", url: "https://res.cloudinary.com/dfymzionj/video/upload/v1608321647/Scene_1_zpilra.mp3"},
@@ -20,16 +24,19 @@ const data = [
     {title: "Track 8", subtitle: "The Rest of the Story", url: "https://res.cloudinary.com/dfymzionj/video/upload/v1639863206/Scene_8_pxoqj4.mp3"},
 ]
 
+// widget created for each track
+
 let widget = (widget) => {
     let widgetWrapper = document.createElement("div");
     widgetWrapper.className="sc-widget-wrapper";
     let widgetWrapperHTML = `<div><div class="widget-header"><p>${widget["title"]}</p><h1 class="widget-title">${widget["subtitle"]}</h1></div><audio controls><source src="${widget["url"]}"></source></audio></div>`
-    // let widgetWrapperHTML = `<iframe width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293&amp;&show_artwork=false&show_playcount=false&show_user=false&buying=false&sharing=false&download=false&color=008000"></iframe>`;
     widgetWrapper.innerHTML = widgetWrapperHTML
     return widgetWrapper;
 }
 
-let connectLink = () => {
+// connection form at bottom of page
+
+function connectLink() {
     let section = document.createElement("section");
     section.className="connect-link"
 
@@ -38,6 +45,7 @@ let connectLink = () => {
     p.innerText = "Would you like to receive Jesus as your Savior? Let us know by filling out your email below."
 
     const form = document.createElement('form')
+    form.addEventListener('submit', onFormSubmit)
 
     const input = document.createElement('input')
     input.type = "text"
@@ -59,8 +67,16 @@ let connectLink = () => {
     return section;
 }
 
-for (let i = 0; i < data.length; i++) {
-    contentWrapper.appendChild(widget(data[i]));
+// connection form event listener
+
+function onFormSubmit(e) {
+    e.preventDefault()
+    email = document.getElementById('email-form-input').value
+    formattedData = {csv_data: `nativity_email, ${email}`, formId: 1}
+    json = JSON.stringify(formattedData)
+    console.log(json)
 }
 
-contentWrapper.appendChild(connectLink())
+//append content on app start
+
+contentWrapper.append(...data.map(widget), connectLink())
