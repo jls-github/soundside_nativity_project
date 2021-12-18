@@ -74,7 +74,17 @@ function onFormSubmit(e) {
     email = document.getElementById('email-form-input').value
     formattedData = {csv_data: `nativity_email, ${email}`, formId: 1}
     json = JSON.stringify(formattedData)
-    console.log(json)
+
+    console.log("sending data to server...")
+    
+    fetch('https://soundside-forms-backend.herokuapp.com/', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: json
+    }).then(res => res.json()).then(console.log)
 }
 
 //append content on app start
