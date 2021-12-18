@@ -1,3 +1,11 @@
+/* utilities */
+
+.red-important {
+    background-color: rgba(210, 65, 80) !important;
+    color: white !important;
+}
+
+
 /* background image */
 
 .site-background-img {

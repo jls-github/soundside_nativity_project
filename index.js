@@ -40,15 +40,16 @@ let connectLink = () => {
     const form = document.createElement('form')
 
     const input = document.createElement('input')
-    input.type="text"
+    input.type = "text"
     input.id = "email-form-input"
     input.name = "email-form-input"
     input.placeholder = "email"
+    input.className="input"
 
     const button = document.createElement('button')
     button.type = "submit"
     button.id = "email-form-submit"
-    button.className="button"
+    button.className="button is-fullwidth red-important"
     button.innerText = "Submit"
 
     form.append(input, button)
