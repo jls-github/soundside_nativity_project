@@ -16,8 +16,8 @@ const data = [
     {title: "Track 4", subtitle: "Little Town of Bethlehem", url: "https://res.cloudinary.com/dfymzionj/video/upload/v1608321644/Scene_4_pw7ouu.mp3"},
     {title: "Track 5", subtitle: "Shepherds and Angels", url: "https://res.cloudinary.com/dfymzionj/video/upload/v1608321644/Scene_5_wbkevv.mp3"},
     {title: "Track 6", subtitle: "Herod's Place", url: "https://res.cloudinary.com/dfymzionj/video/upload/v1608321658/Scene_6_obtu0z.mp3"},
-    {title: "Track 7", subtitle: "Gifts of the Magi", url: "https://res.cloudinary.com/dfymzionj/video/upload/v1608321658/Scene_7_pqbeki.mp3"},
-    {title: "Track 8", subtitle: "The Rest of the Story", url: "https://res.cloudinary.com/dfymzionj/video/upload/v1608321658/Scene_8_slaof7.mp3"},
+    {title: "Track 7", subtitle: "Gifts of the Magi", url: "https://res.cloudinary.com/dfymzionj/video/upload/v1639863203/Scene_7_g3brh7.mp3"},
+    {title: "Track 8", subtitle: "The Rest of the Story", url: "https://res.cloudinary.com/dfymzionj/video/upload/v1639863206/Scene_8_pxoqj4.mp3"},
 ]
 
 let widget = (widget) => {
@@ -31,16 +31,30 @@ let widget = (widget) => {
 
 let connectLink = () => {
     let section = document.createElement("section");
-    section.className="section";
-    let sectionHTML = `<p>We'd love to hear from you. Click on the logo below to let us know your thoughts about the night!</p>
-    <div class="logo-link-wrapper">
-        <div class="logo-link">
-            <a href="https://www.soundside.church/christmas-connect">
-                <img src="https://pbs.twimg.com/profile_images/676516232481259520/r2wS8T24_400x400.png" alt=""/>
-            </a>
-        </div>
-    </div>`
-    section.innerHTML = sectionHTML;
+    section.className="connect-link"
+
+    const p = document.createElement('p')
+    p.className = "form-text"
+    p.innerText = "Would you like to receive Jesus as your Savior? Let us know by filling out your email below."
+
+    const form = document.createElement('form')
+
+    const input = document.createElement('input')
+    input.type="text"
+    input.id = "email-form-input"
+    input.name = "email-form-input"
+    input.placeholder = "email"
+
+    const button = document.createElement('button')
+    button.type = "submit"
+    button.id = "email-form-submit"
+    button.className="button"
+    button.innerText = "Submit"
+
+    form.append(input, button)
+
+    section.append(p, form)
+
     return section;
 }
 

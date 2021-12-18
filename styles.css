@@ -80,6 +80,14 @@
     width: 40vw;
 }
 
+.form-text {
+    font-weight: bold;
+}
+
+.connect-link {
+    width: 80%;
+}
+
 /* Footer */
 
 .footer-style {
