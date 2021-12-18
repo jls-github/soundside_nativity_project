@@ -72,7 +72,7 @@ function connectLink() {
 function onFormSubmit(e) {
     e.preventDefault()
     email = document.getElementById('email-form-input').value
-    formattedData = {csv_data: `${email}`, "form_id": 2}
+    formattedData = {csv_data: `${email}`, "form_id": 1}
     json = JSON.stringify(formattedData)
 
     console.log("sending data to server...")
