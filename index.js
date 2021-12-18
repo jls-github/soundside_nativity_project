@@ -72,10 +72,11 @@ function connectLink() {
 function onFormSubmit(e) {
     e.preventDefault()
     email = document.getElementById('email-form-input').value
-    formattedData = {csv_data: `nativity_email, ${email}`, formId: 1}
+    formattedData = {csv_data: `${email}`, "form_id": 2}
     json = JSON.stringify(formattedData)
 
     console.log("sending data to server...")
+    console.log(json)
 
     fetch('https://soundside-forms-backend.herokuapp.com/submissions', {
         method: "POST",
